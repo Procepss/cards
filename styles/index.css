@@ -1,0 +1,321 @@
+
+/* @font-face {
+    font-family: 'Fruktur';
+    src: url('../fonts/Fruktur-Regular.ttf');
+} 
+
+.product-cards_item-text {
+    font-family: 'Fruktur';
+} */
+
+
+:root {
+    --color-primary: #255cd1;
+    --color-footer: #FF4500;
+    --color-button: #2573e7;
+  }
+
+html {
+    width: 100%;
+    height: 100%;
+}
+                                   /* ЗАДЕЙСТВОВАТЬ 100% ОБЛАСТИ СТРАНИЦЫ БРАУЗЕРА */
+body {
+    margin: 0;
+    height: 100%;
+}
+
+p{
+margin: 0;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.header {
+    /* height: 70px;
+    background-color: var(--color-primary); */
+
+    /* border: 2px solid red; */
+}
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+.menu-main {
+  list-style: none;
+  margin: 40px 0 5px;
+  padding: 25px 0 5px;
+  text-align: center;
+  background: white;
+}
+.menu-main li {display: inline-block;}
+.menu-main li:after {
+  content: "|";
+  color: #606060;
+  display: inline-block;
+  vertical-align:top;
+}
+.menu-main li:last-child:after {content: none;}
+.menu-main a {
+  text-decoration: none;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 20px;
+  margin: 0 34px 0 30px;
+  font-size: 17px;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: color .2s;
+}
+.menu-main a, .menu-main a:visited {color: #9d999d;}
+.menu-main a.current, .menu-main a:hover{color: #feb386;}
+.menu-main a:before,
+.menu-main a:after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  top: auto;
+  right: 50%;
+  bottom: -5px;
+  left: 50%;
+  background: #feb386;
+  transition: .8s;
+}
+.menu-main a:hover:before, .menu-main .current:before {left: 0;}
+.menu-main a:hover:after, .menu-main .current:after {right: 0;}   
+@media (max-width: 550px) {
+.menu-main {padding-top: 0;}
+.menu-main li {display: block;}
+.menu-main li:after {content: none;}
+.menu-main a {
+  padding: 25px 0 20px; 
+  margin: 0 30px;
+}
+}
+
+.main {
+    font-family: 'Open Sans', sans-serif; 
+}
+
+
+.product-cards {
+    background-image:url(../images/пузырь.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: scroll;
+    margin-top: 35px;
+} 
+
+.product-cards_cats, 
+.product_cards-dogs {
+    display: flex;
+    justify-content: space-around;
+}
+
+.product-cards_cats{
+    margin-bottom: 40px;
+}
+
+.product-cards_item{
+    position: relative;
+    padding: 20px;
+    /* border: 0.2px solid black; */
+    border-radius: 10%;
+    box-shadow: 5px 3px 4px 2px grey;
+    background-color: #ecd6ef;
+    width: 177px;
+    
+}
+
+.product-cards_item--dogs {
+    background-color: rgb(121, 230, 121);
+}
+
+
+.product-cards_item::before {
+    position: absolute;
+    content: '';
+    background-image: url("../images/скр.png");
+    width: 50px;
+    height: 50px;
+    top: -2px;
+    left: 6px;
+    background-repeat: no-repeat;
+    /* background-color: rgb(8, 0, 0);*/
+}  
+
+.product-cards_item-decor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-cards_item-decor :hover {
+
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+.product-cards_item-decor--dogs :hover {
+   
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); 
+}
+
+.product-cards_item-image{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 100%;
+    border: 3px solid;;
+}
+
+.product-cards_item-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.product-cards_item-text-headding {
+    font-size: 18px;
+}
+
+.product-cards_item-text-description {
+    font-size: 15px;
+}
+
+.product-cards_item-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.product-cards_item-button {
+    background-color: var(--color-button);
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+}
+
+.product-cards_item-button--green {
+    background-color: green;
+}
+
+.product-cards_item-button:hover {
+    background-color: rgb(22, 218, 22); 
+    transition: all 0.2s;
+    transform: scale(1.2);
+    border-radius: 15%;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+.list {
+    font-size: 15px;
+    font-weight: 700;
+    color: black;
+    margin-top: 50px;
+    margin-left: 59px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.border {
+    list-style: none;
+    padding: 0;
+}
+
+.border li {
+    font-family: "Trebuchet MS", "Lucida Sans";
+    padding: 7px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-left: 10px solid #f05d22; 
+    box-shadow: 2px -2px 5px 0 rgba(0,0,0,.1),
+         -2px -2px 5px 0 rgba(0,0,0,.1),
+        2px 2px 5px 0 rgba(0,0,0,.1),
+        -2px 2px 5px 0 rgba(0,0,0,.1);
+    font-size: 20px;
+    letter-spacing: 2px;
+    transition: 0.3s all linear;
+}
+
+.border li:nth-child(2){border-color: #8bc63e;}
+.border li:nth-child(3){border-color: #fcba30;}
+.border li:nth-child(4){border-color: #1ccfc9;}
+.border li:nth-child(5){border-color: #493224;}
+.border li:hover {border-left: 10px solid transparent;}
+.border li:nth-child(1):hover {border-right: 10px solid #f05d22;}
+.border li:nth-child(2):hover {border-right: 10px solid #8bc63e;}
+.border li:nth-child(3):hover {border-right: 10px solid #fcba30;}
+.border li:nth-child(4):hover {border-right: 10px solid #1ccfc9;}
+.border li:nth-child(5):hover {border-right: 10px solid #493224;}
+
+.goodbye {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.goodbye_image {
+    filter: blur(5px); /* Размытие изображения */
+    transition: 1s;
+}
+
+.goodbye_image:hover {
+    filter: blur(0);
+}
+
+.footer {
+    height: 70px;
+    background-color: var(--color-footer);
+
+    border: 2px solid #d2691e;
+}
+
+
+@media screen and (max-width: 750px) {
+    .product-cards_cats {
+        flex-wrap: wrap;
+    }
+
+    .product_cards-dogs {
+        flex-wrap: wrap;
+        
+    }
+
+    .product-cards_item {
+        margin-top: 15px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .footer{
+        flex-direction: column;
+    }
+}
+ /* Знать разницу между display-block, inline-block и inline 
+ Сделать чтобы текст не вылазил за пределы карточки 
+ Читать про методолгию BEM
+ СКачать шрифт и подключить через font-face и красивые заголовки, не использовать псевдо класс FIRST LINE 
+ Сделать блок с карточками полностью адаптивным 
+ Изучить как использовать CSS переменные (вынести все цвета в переменные)*/
